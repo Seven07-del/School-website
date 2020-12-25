@@ -1,0 +1,502 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, verdana, geneva, 'Helvetica Neue', sans-serif;
+    background: rgb(211, 211, 253);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+}
+ul li {
+    display: flex;
+    list-style: none;
+}
+
+.wrapper .hero-content {
+    height: 100vh;
+    background: url(/media/clement\ laptop\ with\ codes.jpg) center/cover no-repeat fixed;
+    /* background-color: rgba(19, 19, 51, 0.788);
+    background-blend-mode: soft-light; */
+}
+/* beginning of nav-bar */
+.hero-content .header-content {
+    height: 3.5em;
+    width: 100%;
+    background-color: rgba(26, 153, 226, 0.452);
+    position: fixed;
+}
+.hero-content .header-content header {
+    /* position: relative; */
+    width: 100%;
+    height: 3.5em;
+    display: flex;
+    background-color: rgba(26, 153, 226, 0.452);
+    margin: auto;
+}
+
+.hero-content .header-content header .logo {
+    margin-left: 3.4em;
+    margin-top: 0.8em;
+    display: flex;
+    width: 9.4em;
+    /* justify-content: space-between; */
+}
+.logo i {
+    font-size: 2.2em;
+}
+
+header nav {
+    display: flex;
+    /* margin-right: -3em; */
+    width: 90%;
+    justify-content: flex-end;
+}
+header nav .nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 0.9em;
+    margin-bottom: 0;
+}
+header nav .nav-links li {
+    margin-left: 2.4em;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Hide for desktop */
+header nav .close-button, 
+header nav .menu-button {
+    visibility: hidden;
+}
+header nav .nav-links a {
+    display: block;
+    color: whitesmoke;
+    /* padding: 4px 16px; */
+    text-transform: capitalize;
+    font-size: 1.3em;
+    transition: all 0.2s ease;
+}
+header nav .nav-links a:hover {
+    text-decoration: none;
+    background: darkgray;
+    color: whitesmoke;
+    /* color: whitesmoke;
+    background: #282e35; */
+    /* background: rgb(127, 201, 250); */
+}
+
+/* Media Queries for Navbar */
+@media (max-width: 800px) {
+    nav {
+        display: block;
+    }
+    nav ul.nav-links {
+        position: absolute;
+        top: 3.5em;
+        right: -300px;
+        width: 300px;
+        height: 50vh;
+        background: #464f58;
+        padding: 0;
+        display: block;
+        /* z-index: 5; */
+        margin-right: 0;
+        transition: all 0.2s ease;
+    }
+    nav ul.nav-links.active {
+        right: 0;
+    }
+
+    /* nav .nav-links {
+        padding: 0;
+    } */
+    nav ul.nav-links li {
+        display: block;
+        margin-left: 0;
+        height: 50px;
+        border-bottom: 1px solid #ddd;
+    }
+    nav ul.nav-links li a {
+        text-align: center;
+        display: block;
+        height: 100%;
+    }
+    nav ul.nav-links li a:nth-of-type(1) {
+        line-height: 2.3;
+    }
+
+    nav ul.nav-links li:nth-of-type(1) {
+        margin-top: 55px;
+        border-top: 1px solid #ddd;
+    }
+
+    header nav .close-button,
+    header nav .menu-button {
+        visibility: visible;
+        cursor: pointer;
+    }
+    header nav .menu-button .fa-bars {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 20px;
+        color: white;
+    }
+    .icon {
+        display: block;
+    }
+    .icon.hide {
+        display: none;
+    }
+
+    header nav .close-button .fa-times {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 20px;
+        color: white;
+    }
+    
+    
+
+}
+
+
+/* End of nav-bar */
+
+/* Beginnign of landing page */
+.landing-page {
+    display: flex;
+    height: calc(100vh - 10%);
+    align-items: center;
+    justify-content: center;
+    /* place-content: inherit; */
+    flex-direction: column;
+}
+.landing-page .landing-page-container {
+    margin-top: -0.5em;
+    margin-left: -1em;
+    line-height: 1.4;
+}
+.landing-page .landing-page-container h1 {
+    text-align: center;
+    font-size: 2.7em;
+    font-weight: 700;
+    color: rgb(124, 124, 196);
+}
+.landing-page .landing-page-container p {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 580;
+    color: var(--light);
+}
+.landing-page .landing-page-container button {
+    text-align: center;
+    border-radius: 30px;
+    color: rgb(83, 78, 78);
+    background: rgb(224, 218, 218);
+    font-size: 0.9em;
+    font-weight: 680;
+    padding: 0.3em 2.2em 0.3em 2.2em;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+.landing-page .landing-page-container button:hover {
+    color: var(--light);
+    background: var(--dark);
+}
+/* End of Landing page */
+
+/* Start of Mission statement */
+.mission-statement {
+    text-align: center;
+}
+.mission-statement h2 {
+    margin-top: 1em;
+    font-size: 2em;
+    font-weight: bold;
+}
+.mission-statement>p {
+    width: 60%;
+    position: relative;
+    left: 20%;
+}
+.mission-statement i {
+    font-size: 3em;
+}
+.mission-statement .boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 96%; */
+    justify-content: center;
+    margin: 0 auto;
+}
+.mission-statement .boxes .box {
+    max-width: 280px;
+    /* max-width: calc((96% - 56px) / 4); */
+    margin: 5px;
+    padding: 1em;
+    border-radius: 5px;
+    background: var(--light);
+}
+/* End of Mission Statement */
+
+/* Start of Testimonials Section */
+section.testimonials {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.testimonials p {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    
+}
+
+.testimonials .testimonial-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.testimonial-box .t-box {
+    background: var(--light);
+    max-width: 280px;
+    margin: 5px;
+    padding: 1em;
+    border-radius: 5px;
+    line-height: 1.2;
+}
+.testimonial-box .t-box img {
+    border-radius: 50%;
+    margin-bottom: .6em;
+}
+/* End of Testimonials Section */
+
+/* Start of Forms */
+section.forms {
+    width: 100%;
+    height: 70vh;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+}
+.form-container {
+    width: 400px;
+    height: 76%;
+    margin: 0 auto;
+    /* background: #c3c3fc; */
+    /* padding-top: 40px; */
+    /* border-radius: 30px;
+    background: #c3c3fc;
+    box-shadow:  11px 11px 26px #c3c3fc, 
+                -11px -11px 26px #c3c3fc; */
+    border-radius: 7px;
+    background: #ffffff;
+    box-shadow:  20px 20px 55px #f2f2f2, 
+                 -10px -10px 55px #ffffff;
+}
+section .form-container form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    max-width: 80%;
+    margin: auto;
+}
+form label:nth-of-type(1), 
+form label:nth-of-type(2), 
+form label:nth-of-type(3) {
+    text-align: left;
+    margin-bottom: 0;
+}
+form input:nth-of-type(1),
+form input:nth-of-type(2),
+form input:nth-of-type(3) {
+    border: none;
+    outline: none;
+    max-width: 100%;
+    border-radius: 4px;
+    /* background: linear-gradient(225deg, #e6e6e6, #ffffff); */
+    box-shadow:  -7px 7px 37px #f5f5f5, 
+                 7px -7px 37px #ffffff;
+    border: 1px solid #e6e6e6;
+}
+form input:nth-of-type(1) {
+    border-radius: inset;
+}
+
+
+
+
+/* End of Forms */
+
+.wrapper .above-footer {
+    background: #bbbbff;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+.above-footer .newsletter {
+    height: 100%;
+}
+.above-footer .newsletter h5 {
+    margin-top: 2em;
+    color: #464f58;
+}
+.above-footer .newsletter p {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    color: #464f58;
+}
+.above-footer .newsletter input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 70%;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    box-shadow: inset ;
+}
+.above-footer .newsletter input:focus {
+    outline: none;
+}
+.above-footer .newsletter button {
+    border: 1px solid gray;
+    padding: 5px 16px;
+    border-radius: 4px;
+    background: #343a40;
+    color: whitesmoke;
+    font-weight: 500;
+}
+.above-footer .newsletter button:hover, 
+.above-footer .newsletter button:active {
+    background: lightgray;
+    color: #343a40;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.above-footer .get-interactive h6 {
+    color: darkslategray;
+    width: 90%;
+    margin: auto;
+    margin-top: 2.6em;
+}
+
+.get-interactive .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
+    width: 70%;
+    height: 160px;
+    justify-content: space-evenly;
+}
+/* WhatsApp */
+.socials .fa-whatsapp {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.socials .fa-whatsapp span {
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+.socials span {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, verdana, geneva, 'Helvetica Neue', sans-serif;
+    
+}
+/* Contact */
+.socials .fa-phone-alt {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.socials .fa-phone-alt span {
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+/* Twitter */
+.socials .fa-twitter {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.socials .fa-twitter span {
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+/* Email */
+.socials .fa-envelope {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.socials .fa-envelope span {
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+
+/* Footer Section */
+footer {
+    background: #8484d1;
+}
+footer p a {
+    color: #3a3838;
+    font-size: 1em;
+    font-weight: bold;
+}
+footer p a:hover {
+    text-decoration: none;
+    color: black;
+}
+footer p {
+    margin-bottom: 0;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 576px) {
+    .above-footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 600px;
+        justify-content: space-evenly;
+    }
+    .above-footer .newsletter {
+        height: 300px;
+    }
+    .above-footer .get-interactive {
+        height: 300px;
+    }
+}
+@media (min-width: 800px) and (max-width: 840px) {
+    header nav .nav-links li {
+        margin-left: 1.9em;
+    }
+    header nav .nav-links {
+        margin-right: 0.8em;
+    }
+}
+@media (min-width: 801px) {
+    header nav .nav-links a {
+        display: block;
+        color: #282e35;
+        padding: 4px 16px;
+        text-transform: capitalize;
+        font-size: 1.3em;
+        transition: all 0.2s ease;
+    }
+    header nav .nav-links a:hover {
+        text-decoration: none;
+        color: whitesmoke;
+        background: #282e35;
+        /* background: rgb(127, 201, 250); */
+    }
+    
+}
